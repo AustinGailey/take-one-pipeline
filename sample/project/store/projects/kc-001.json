@@ -1,0 +1,21 @@
+{
+ "key": "kc-001",
+ "code": "KC-001",
+ "type": "episode",
+ "channel": "Kettle & Crank (fictional)",
+ "title": "Roast your first batch of coffee at home",
+ "topicId": "t-home-roast",
+ "deliverablePlan": {
+  "long": {
+   "count": 1
+  },
+  "short": {
+   "count": 6
+  },
+  "lead-magnet": {
+   "count": 1
+  }
+ },
+ "plan": {},
+ "createdAt": "2026-01-05T09:00:00Z"
+}

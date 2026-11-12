@@ -1,0 +1,14 @@
+{
+ "_doc": "The owner's decisions, pre-recorded so the sample runs unattended. In production these are clicks on decision cards. sample/run_sample.py writes them as page-owned fields; no agent lane can.",
+ "pick-kc-001-topic": {
+  "value": "p1",
+  "text": "Go with the popper. Keep it under three minutes.",
+  "plan": {
+   "promise": "Roast your first batch at home in twelve minutes and leave with a one-page roast checklist",
+   "before": "Thinks roasting needs an expensive machine",
+   "audience": "Home brewers who buy whole beans",
+   "angle": "No roaster needed: a popcorn popper and twelve minutes",
+   "trustJob": "competence"
+  }
+ }
+}

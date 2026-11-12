@@ -1,0 +1,194 @@
+{
+ "status": "done",
+ "reply": "Wrote script s1: a cold open, three chapters and the community close, about two minutes. The script gate is queued.",
+ "writes": [
+  {
+   "path": "projects/kc-001/stages/design",
+   "op": "merge",
+   "data": {
+    "blueprint": {
+     "version": "b1",
+     "targetMinutes": 2,
+     "deliverable": {
+      "name": "One-page roast checklist",
+      "showable": true
+     }
+    }
+   }
+  },
+  {
+   "path": "projects/kc-001/stages/script",
+   "op": "merge",
+   "data": {
+    "current": "s1",
+    "coldOpen": {
+     "co-01": {
+      "lineId": "co-01",
+      "order": 1
+     },
+     "co-02": {
+      "lineId": "co-02",
+      "order": 2
+     }
+    },
+    "chapters": {
+     "c1": {
+      "title": "What you need",
+      "order": 1,
+      "lineIds": [
+       "c1-01",
+       "c1-02",
+       "c1-03",
+       "c1-04",
+       "c1-05"
+      ]
+     },
+     "c2": {
+      "title": "The roast",
+      "order": 2,
+      "lineIds": [
+       "c2-01",
+       "c2-02",
+       "c2-03",
+       "c2-04",
+       "c2-05",
+       "c2-06"
+      ]
+     },
+     "c3": {
+      "title": "Cool and rest",
+      "order": 3,
+      "lineIds": [
+       "c3-01",
+       "c3-02",
+       "c3-03",
+       "c3-04",
+       "c3-05"
+      ]
+     }
+    },
+    "ctas": {
+     "cta-community": {
+      "target": "community",
+      "standard": true,
+      "text": "Join the community, linked below."
+     }
+    },
+    "experiments": {},
+    "updatedAt": "2026-01-08T11:00:00Z"
+   }
+  },
+  {
+   "path": "projects/kc-001/deliverables/script/versions/s1",
+   "op": "set",
+   "data": {
+    "kind": "script",
+    "lines": {
+     "co-01": {
+      "text": "This is coffee I roasted myself this morning, in a popcorn popper, in twelve minutes.",
+      "block": "cold-open",
+      "order": 1
+     },
+     "co-02": {
+      "text": "By the end of this video you will have roasted your first batch, and you will have a one page checklist to do it again.",
+      "block": "cold-open",
+      "order": 2
+     },
+     "c1-01": {
+      "text": "You need three things, and you probably own two of them.",
+      "block": "c1",
+      "order": 3
+     },
+     "c1-02": {
+      "text": "A hot air popcorn popper, a metal colander, and green coffee beans.",
+      "block": "c1",
+      "order": 4
+     },
+     "c1-03": {
+      "text": "A second hand popper costs about $25, which is less than two bags of good beans.",
+      "block": "c1",
+      "order": 5,
+      "source": "f2"
+     },
+     "c1-04": {
+      "text": "Do this next to an open window, because roasting makes smoke and the smell stays in the room.",
+      "block": "c1",
+      "order": 6
+     },
+     "c1-05": {
+      "text": "Measure half a cup of green beans. The popper needs room for the beans to spin.",
+      "block": "c1",
+      "order": 7
+     },
+     "c2-01": {
+      "text": "Switch the popper on, pour the beans in, and start a timer.",
+      "block": "c2",
+      "order": 8
+     },
+     "c2-02": {
+      "text": "For the first three minutes the beans turn from green to yellow and smell like hay.",
+      "block": "c2",
+      "order": 9
+     },
+     "c2-03": {
+      "text": "Around minute five you will hear a sharp pop. That sound is called first crack, and it means the beans are now coffee.",
+      "block": "c2",
+      "order": 10
+     },
+     "c2-04": {
+      "text": "From here you are choosing a flavour. Stop one minute after first crack for a light roast.",
+      "block": "c2",
+      "order": 11
+     },
+     "c2-05": {
+      "text": "Wait three minutes for a darker one. I think two minutes is the easiest place to start.",
+      "block": "c2",
+      "order": 12
+     },
+     "c2-06": {
+      "text": "Write the time down. That number is the only thing you change next week.",
+      "block": "c2",
+      "order": 13
+     },
+     "c3-01": {
+      "text": "Now the part people skip. Tip the beans into the colander and shake them by the window.",
+      "block": "c3",
+      "order": 14
+     },
+     "c3-02": {
+      "text": "They keep cooking until they are cool, so move fast. You want them warm to the touch in two minutes.",
+      "block": "c3",
+      "order": 15
+     },
+     "c3-03": {
+      "text": "Put them in a jar and leave the lid loose for a day, because fresh beans give off gas.",
+      "block": "c3",
+      "order": 16
+     },
+     "c3-04": {
+      "text": "Brew them tomorrow, not today. Rested coffee tastes sweeter.",
+      "block": "c3",
+      "order": 17
+     },
+     "c3-05": {
+      "text": "The checklist with every step and my roast times is free in the community, linked below. Come and post your first batch.",
+      "block": "c3",
+      "order": 18
+     }
+    },
+    "renderedAt": "2026-01-08T11:00:00Z"
+   }
+  }
+ ],
+ "followups": [
+  {
+   "text": "Run the script gate on s1.",
+   "context": {
+    "kind": "stage",
+    "stage": "qa",
+    "action": "gate",
+    "gate": "script"
+   }
+  }
+ ]
+}

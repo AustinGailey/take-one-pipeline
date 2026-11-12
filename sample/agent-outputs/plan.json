@@ -1,0 +1,30 @@
+{
+ "status": "done",
+ "reply": "Proposed the plan from pitch p1: a first batch on a popcorn popper, ending with a one-page roast checklist. The plan gate is queued.",
+ "writes": [
+  {
+   "path": "projects/kc-001/stages/plan",
+   "op": "merge",
+   "data": {
+    "title": "Roast your first batch of coffee at home",
+    "angle": "No roaster needed: a popcorn popper and twelve minutes",
+    "promise": "Roast your first batch at home in twelve minutes and leave with a one-page roast checklist",
+    "audience": "Home brewers who buy whole beans",
+    "signatureIdea": "The whole roast is one unbroken take with a visible timer",
+    "status": "proposed",
+    "updatedAt": "2026-01-07T10:00:00Z"
+   }
+  }
+ ],
+ "followups": [
+  {
+   "text": "Run the plan gate on the S1 proposal.",
+   "context": {
+    "kind": "stage",
+    "stage": "qa",
+    "action": "gate",
+    "gate": "plan"
+   }
+  }
+ ]
+}

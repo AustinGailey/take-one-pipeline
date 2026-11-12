@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 840" width="1600" height="840" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">Take One pipeline: stages S0 to S7, the QA gate after each, and the four owner decisions</title>
+<desc id="d">Eight stages in a row from Research to Measure. Under each stage is the independent QA gate that checks its hand-off; Design has two. Above Plan, Design, Package and Publish are the four decisions only the owner can make. Agent writes pass a lane check before they reach the store. Measure feeds rules back to Research.</desc>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9AA4B2"/></marker><marker id="aro" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#F97316"/></marker></defs>
+<rect width="1600" height="840" fill="#0B0D10"/>
+<text x="60" y="84" fill="#F4F5F7" font-size="40" font-weight="800" letter-spacing="-0.5">take-one-pipeline</text>
+<text x="60" y="122" fill="#9AA4B2" font-size="21">8 stages · 10 agent profiles · 9 independent gates · 4 decisions only the owner makes</text>
+<text x="60" y="226" fill="#F97316" font-size="15" font-weight="700" letter-spacing="1.5">OWNER</text>
+<text x="60" y="247" fill="#9AA4B2" font-size="13.5">the only waits</text>
+<text x="60" y="265" fill="#9AA4B2" font-size="13.5">on a person</text>
+<text x="60" y="334" fill="#F4F5F7" font-size="15" font-weight="700" letter-spacing="1.5">STAGES</text>
+<text x="60" y="355" fill="#9AA4B2" font-size="13.5">one profile,</text>
+<text x="60" y="373" fill="#9AA4B2" font-size="13.5">one write lane</text>
+<text x="60" y="492" fill="#7DD3A8" font-size="15" font-weight="700" letter-spacing="1.5">QA GATES</text>
+<text x="60" y="513" fill="#9AA4B2" font-size="13.5">a separate job,</text>
+<text x="60" y="531" fill="#9AA4B2" font-size="13.5">never the producer</text>
+<rect x="200" y="300" width="150" height="96" rx="12" fill="#14181D" stroke="#2A313A" stroke-width="1.5"/>
+<text x="216" y="330" fill="#9AA4B2" font-size="15" font-weight="700">S0</text>
+<text x="216" y="360" fill="#F4F5F7" font-size="24" font-weight="700">Research</text>
+<text x="216" y="382" fill="#9AA4B2" font-size="14">profile: research</text>
+<line x1="353" y1="348.0" x2="366" y2="348.0" stroke="#9AA4B2" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="275.0" y1="396" x2="275.0" y2="476" stroke="#2A313A" stroke-width="2"/>
+<rect x="208" y="476" width="134" height="38" rx="19" fill="#1B222B" stroke="#7DD3A8" stroke-width="1.5"/>
+<text x="275.0" y="501" fill="#7DD3A8" font-size="15" font-weight="600" text-anchor="middle">gate: research</text>
+<rect x="370" y="300" width="150" height="96" rx="12" fill="#14181D" stroke="#2A313A" stroke-width="1.5"/>
+<text x="386" y="330" fill="#9AA4B2" font-size="15" font-weight="700">S1</text>
+<text x="386" y="360" fill="#F4F5F7" font-size="24" font-weight="700">Plan</text>
+<text x="386" y="382" fill="#9AA4B2" font-size="14">profile: plan</text>
+<line x1="523" y1="348.0" x2="536" y2="348.0" stroke="#9AA4B2" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="445.0" y1="396" x2="445.0" y2="476" stroke="#2A313A" stroke-width="2"/>
+<rect x="378" y="476" width="134" height="38" rx="19" fill="#1B222B" stroke="#7DD3A8" stroke-width="1.5"/>
+<text x="445.0" y="501" fill="#7DD3A8" font-size="15" font-weight="600" text-anchor="middle">gate: plan</text>
+<rect x="364" y="212" width="162" height="40" rx="8" fill="#F97316"/>
+<text x="445.0" y="238" fill="#0B0D10" font-size="13.5" font-weight="800" text-anchor="middle">1  topic + package pick</text>
+<line x1="445.0" y1="252" x2="445.0" y2="297" stroke="#F97316" stroke-width="2" marker-end="url(#aro)"/>
+<rect x="540" y="300" width="150" height="96" rx="12" fill="#14181D" stroke="#2A313A" stroke-width="1.5"/>
+<text x="556" y="330" fill="#9AA4B2" font-size="15" font-weight="700">S2</text>
+<text x="556" y="360" fill="#F4F5F7" font-size="24" font-weight="700">Design</text>
+<text x="556" y="382" fill="#9AA4B2" font-size="14">profile: design</text>
+<line x1="693" y1="348.0" x2="706" y2="348.0" stroke="#9AA4B2" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="615.0" y1="396" x2="615.0" y2="476" stroke="#2A313A" stroke-width="2"/>
+<rect x="548" y="476" width="134" height="38" rx="19" fill="#1B222B" stroke="#7DD3A8" stroke-width="1.5"/>
+<text x="615.0" y="501" fill="#7DD3A8" font-size="15" font-weight="600" text-anchor="middle">gate: script</text>
+<rect x="548" y="522" width="134" height="38" rx="19" fill="#1B222B" stroke="#7DD3A8" stroke-width="1.5"/>
+<text x="615.0" y="547" fill="#7DD3A8" font-size="15" font-weight="600" text-anchor="middle">gate: storyboard</text>
+<rect x="534" y="212" width="162" height="40" rx="8" fill="#F97316"/>
+<text x="615.0" y="238" fill="#0B0D10" font-size="13.5" font-weight="800" text-anchor="middle">2  approve the animatic</text>
+<line x1="615.0" y1="252" x2="615.0" y2="297" stroke="#F97316" stroke-width="2" marker-end="url(#aro)"/>
+<rect x="710" y="300" width="150" height="96" rx="12" fill="#14181D" stroke="#2A313A" stroke-width="1.5"/>
+<text x="726" y="330" fill="#9AA4B2" font-size="15" font-weight="700">S3</text>
+<text x="726" y="360" fill="#F4F5F7" font-size="24" font-weight="700">Capture</text>
+<text x="726" y="382" fill="#9AA4B2" font-size="14">profile: capture</text>
+<line x1="863" y1="348.0" x2="876" y2="348.0" stroke="#9AA4B2" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="785.0" y1="396" x2="785.0" y2="476" stroke="#2A313A" stroke-width="2"/>
+<rect x="718" y="476" width="134" height="38" rx="19" fill="#1B222B" stroke="#7DD3A8" stroke-width="1.5"/>
+<text x="785.0" y="501" fill="#7DD3A8" font-size="15" font-weight="600" text-anchor="middle">gate: capture</text>
+<rect x="880" y="300" width="150" height="96" rx="12" fill="#14181D" stroke="#2A313A" stroke-width="1.5"/>
+<text x="896" y="330" fill="#9AA4B2" font-size="15" font-weight="700">S4</text>
+<text x="896" y="360" fill="#F4F5F7" font-size="24" font-weight="700">Edit</text>
+<text x="896" y="382" fill="#9AA4B2" font-size="14">profile: edit</text>
+<line x1="1033" y1="348.0" x2="1046" y2="348.0" stroke="#9AA4B2" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="955.0" y1="396" x2="955.0" y2="476" stroke="#2A313A" stroke-width="2"/>
+<rect x="888" y="476" width="134" height="38" rx="19" fill="#1B222B" stroke="#7DD3A8" stroke-width="1.5"/>
+<text x="955.0" y="501" fill="#7DD3A8" font-size="15" font-weight="600" text-anchor="middle">gate: edit</text>
+<rect x="1050" y="300" width="150" height="96" rx="12" fill="#14181D" stroke="#2A313A" stroke-width="1.5"/>
+<text x="1066" y="330" fill="#9AA4B2" font-size="15" font-weight="700">S5</text>
+<text x="1066" y="360" fill="#F4F5F7" font-size="24" font-weight="700">Package</text>
+<text x="1066" y="382" fill="#9AA4B2" font-size="14">profile: package</text>
+<line x1="1203" y1="348.0" x2="1216" y2="348.0" stroke="#9AA4B2" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="1125.0" y1="396" x2="1125.0" y2="476" stroke="#2A313A" stroke-width="2"/>
+<rect x="1058" y="476" width="134" height="38" rx="19" fill="#1B222B" stroke="#7DD3A8" stroke-width="1.5"/>
+<text x="1125.0" y="501" fill="#7DD3A8" font-size="15" font-weight="600" text-anchor="middle">gate: package</text>
+<rect x="1044" y="212" width="162" height="40" rx="8" fill="#F97316"/>
+<text x="1125.0" y="238" fill="#0B0D10" font-size="13.5" font-weight="800" text-anchor="middle">3  screen cut + shorts</text>
+<line x1="1125.0" y1="252" x2="1125.0" y2="297" stroke="#F97316" stroke-width="2" marker-end="url(#aro)"/>
+<rect x="1220" y="300" width="150" height="96" rx="12" fill="#14181D" stroke="#2A313A" stroke-width="1.5"/>
+<text x="1236" y="330" fill="#9AA4B2" font-size="15" font-weight="700">S6</text>
+<text x="1236" y="360" fill="#F4F5F7" font-size="24" font-weight="700">Publish</text>
+<text x="1236" y="382" fill="#9AA4B2" font-size="14">profile: publish</text>
+<line x1="1373" y1="348.0" x2="1386" y2="348.0" stroke="#9AA4B2" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="1295.0" y1="396" x2="1295.0" y2="476" stroke="#2A313A" stroke-width="2"/>
+<rect x="1228" y="476" width="134" height="38" rx="19" fill="#1B222B" stroke="#7DD3A8" stroke-width="1.5"/>
+<text x="1295.0" y="501" fill="#7DD3A8" font-size="15" font-weight="600" text-anchor="middle">gate: publish</text>
+<rect x="1214" y="212" width="162" height="40" rx="8" fill="#F97316"/>
+<text x="1295.0" y="238" fill="#0B0D10" font-size="13.5" font-weight="800" text-anchor="middle">4  publish consent</text>
+<line x1="1295.0" y1="252" x2="1295.0" y2="297" stroke="#F97316" stroke-width="2" marker-end="url(#aro)"/>
+<rect x="1390" y="300" width="150" height="96" rx="12" fill="#14181D" stroke="#2A313A" stroke-width="1.5"/>
+<text x="1406" y="330" fill="#9AA4B2" font-size="15" font-weight="700">S7</text>
+<text x="1406" y="360" fill="#F4F5F7" font-size="24" font-weight="700">Measure</text>
+<text x="1406" y="382" fill="#9AA4B2" font-size="14">profile: rules</text>
+<line x1="1465.0" y1="396" x2="1465.0" y2="476" stroke="#2A313A" stroke-width="2"/>
+<rect x="1398" y="476" width="134" height="38" rx="19" fill="#1B222B" stroke="#7DD3A8" stroke-width="1.5"/>
+<text x="1465.0" y="501" fill="#7DD3A8" font-size="15" font-weight="600" text-anchor="middle">gate: measure</text>
+<path d="M1465.0 514 V594 H275.0 V520" fill="none" stroke="#9AA4B2" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#ar)"/>
+<rect x="470.0" y="577" width="800" height="34" rx="6" fill="#0B0D10"/>
+<text x="870.0" y="600" fill="#9AA4B2" font-size="16" text-anchor="middle">LEARN: results and escapes go back to the stage that owns them, as rule changes and new checks</text>
+<rect x="60.0" y="644" width="477.3333333333333" height="146" rx="12" fill="#14181D" stroke="#2A313A" stroke-width="1.5"/>
+<rect x="60.0" y="662" width="4" height="26" fill="#F97316"/>
+<text x="82.0" y="682" fill="#F4F5F7" font-size="20" font-weight="700">Producer ≠ checker</text>
+<text x="82.0" y="712" fill="#9AA4B2" font-size="15.5">Only the qa lane may write projects/{key}/qa/*, and only</text>
+<text x="82.0" y="735" fill="#9AA4B2" font-size="15.5">as create. A producer that writes its own pass is</text>
+<text x="82.0" y="758" fill="#9AA4B2" font-size="15.5">dropped at collect.</text>
+<rect x="561.3333333333333" y="644" width="477.3333333333333" height="146" rx="12" fill="#14181D" stroke="#2A313A" stroke-width="1.5"/>
+<rect x="561.3333333333333" y="662" width="4" height="26" fill="#F97316"/>
+<text x="583.3333333333333" y="682" fill="#F4F5F7" font-size="20" font-weight="700">A failed gate holds the hand-off</text>
+<text x="583.3333333333333" y="712" fill="#9AA4B2" font-size="15.5">It raises one fix-or-waive card for the owner. Fix goes</text>
+<text x="583.3333333333333" y="735" fill="#9AA4B2" font-size="15.5">back to the producer and the gate runs again. A waiver</text>
+<text x="583.3333333333333" y="758" fill="#9AA4B2" font-size="15.5">is logged on the run.</text>
+<rect x="1062.6666666666665" y="644" width="477.3333333333333" height="146" rx="12" fill="#14181D" stroke="#2A313A" stroke-width="1.5"/>
+<rect x="1062.6666666666665" y="662" width="4" height="26" fill="#F97316"/>
+<text x="1084.6666666666665" y="682" fill="#F4F5F7" font-size="20" font-weight="700">A miss becomes a check</text>
+<text x="1084.6666666666665" y="712" fill="#9AA4B2" font-size="15.5">Anything a person catches after a gate passed is logged</text>
+<text x="1084.6666666666665" y="735" fill="#9AA4B2" font-size="15.5">as an escape and ends in a new check, or a written</text>
+<text x="1084.6666666666665" y="758" fill="#9AA4B2" font-size="15.5">reason it cannot be automated.</text>
+</svg>

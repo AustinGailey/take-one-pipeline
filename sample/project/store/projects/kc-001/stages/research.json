@@ -1,0 +1,103 @@
+{
+ "version": "r1",
+ "topicId": "t-home-roast",
+ "gap": "Every beginner video assumes a drum roaster; none shows a first batch on gear people already own.",
+ "questions": {
+  "q1": {
+   "text": "What is the cheapest gear that works?"
+  },
+  "q2": {
+   "text": "How do I know when to stop?"
+  },
+  "q3": {
+   "text": "How long must the beans rest?"
+  }
+ },
+ "pains": {
+  "pn1": {
+   "text": "I burned my first batch and gave up",
+   "source": {
+    "kind": "web",
+    "url": "https://example.com/forum/first-roast"
+   }
+  },
+  "pn2": {
+   "text": "Roasters cost more than my espresso machine",
+   "source": {
+    "kind": "web",
+    "url": "https://example.com/forum/gear-cost"
+   }
+  },
+  "pn3": {
+   "text": "Nobody says what first crack sounds like",
+   "source": {
+    "kind": "web",
+    "url": "https://example.com/forum/first-crack"
+   }
+  }
+ },
+ "competitors": {
+  "c1": {
+   "title": "Drum roaster walkthrough",
+   "covers": "profiles",
+   "misses": "cheap gear",
+   "gap": "assumes a roaster",
+   "views": 48000,
+   "channelMedian": 12000
+  },
+  "c2": {
+   "title": "Roast curves explained",
+   "covers": "theory",
+   "misses": "a first batch",
+   "gap": "no hands-on",
+   "views": 21000,
+   "channelMedian": 9000
+  },
+  "c3": {
+   "title": "I roasted coffee for 30 days",
+   "covers": "story",
+   "misses": "steps",
+   "gap": "not repeatable",
+   "views": 15000,
+   "channelMedian": 11000
+  }
+ },
+ "facts": {
+  "f1": {
+   "claim": "First crack is an audible pop as moisture escapes the bean",
+   "sourceUrl": "https://example.com/roasting-basics",
+   "quote": "an audible pop, called first crack"
+  },
+  "f2": {
+   "claim": "A used hot-air popcorn popper sells for about 25 dollars",
+   "sourceUrl": "https://example.com/popper-prices",
+   "quote": "typically around $25 second hand"
+  }
+ },
+ "demo": {
+  "verdict": "yes",
+  "why": "one popper, one colander, twelve minutes on camera"
+ },
+ "deliverables": {
+  "dl1": {
+   "name": "One-page roast checklist",
+   "chosen": true
+  },
+  "dl2": {
+   "name": "Roast log template"
+  }
+ },
+ "pitches": {
+  "p1": {
+   "title": "Roast your first batch of coffee at home",
+   "promise": "Roast your first batch at home in twelve minutes and leave with a one-page roast checklist",
+   "trustJob": "competence"
+  },
+  "p2": {
+   "title": "Is home roasting worth it?",
+   "promise": "A cost comparison sheet for one year of home roasting",
+   "trustJob": "relevance"
+  }
+ },
+ "updated": "2026-01-06T14:00:00Z"
+}

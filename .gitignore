@@ -1,0 +1,12 @@
+# scratch from sample runs and tests
+.work/
+jobs/runs/
+.pytest_cache/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+.env
+.env.*
+# publishing notes for the author, not part of the repo
+/PUBLISH.md

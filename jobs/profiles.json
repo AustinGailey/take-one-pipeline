@@ -1,0 +1,455 @@
+{
+ "_doc": "Per-stage tool profiles for jobs/dispatch.py (JOBS-CONTRACT.md). tools = the allowlist (Bash only through allow rules); writes = the agent's lane: [path regex, fields ('*' = whole doc), options?]. Options: {\"create\": true} = create-only (a set on an existing doc is refused). {k} = the request's project key. A write outside its lane is dropped at collect (jobs/runs/<job>/dropped.json + decisions/lane-<job>), never applied. pageOwned = fields the owner's page owns inside docs an agent lane may write; collect strips them from every agent write. Paths in common are relative to the repo root.",
+ "common": {
+  "addDirs": [
+   "."
+  ],
+  "cwd": ".",
+  "model": "sonnet",
+  "allow": [
+   "Bash(python3:*)",
+   "Bash(date:*)"
+  ]
+ },
+ "profiles": {
+  "research": {
+   "skill": "content-research",
+   "timeout": 1500,
+   "tools": "Read Write Edit Glob Grep WebSearch WebFetch Bash",
+   "allow": [
+    "Bash(uvx:*)",
+    "Bash(curl -s:*)",
+    "Bash(curl -sL:*)"
+   ],
+   "writes": [
+    [
+     "^projects/{k}/stages/research$",
+     "*"
+    ],
+    [
+     "^topics/[^/]+$",
+     [
+      "candidate",
+      "signals",
+      "score",
+      "angle",
+      "promise",
+      "demoIdea",
+      "sources",
+      "notes",
+      "status",
+      "enrich",
+      "title",
+      "audience",
+      "updated"
+     ]
+    ],
+    [
+     "^studio/radar$",
+     "*"
+    ],
+    [
+     "^studio/ownerLanguage$",
+     "*"
+    ]
+   ]
+  },
+  "plan": {
+   "skill": "content-research",
+   "timeout": 1200,
+   "tools": "Read Write Edit Glob Grep WebSearch WebFetch Bash",
+   "allow": [
+    "Bash(node:*)",
+    "Bash(uvx:*)",
+    "Bash(curl -s:*)",
+    "Bash(curl -sL:*)"
+   ],
+   "writes": [
+    [
+     "^projects/{k}/stages/plan$",
+     [
+      "title",
+      "angle",
+      "promise",
+      "audience",
+      "signatureIdea",
+      "lineage",
+      "status",
+      "updatedAt"
+     ]
+    ],
+    [
+     "^topics/[^/]+$",
+     [
+      "status"
+     ]
+    ],
+    [
+     "^projects/{k}/stages/research$",
+     [
+      "flags",
+      "summary",
+      "updated",
+      "version"
+     ]
+    ],
+    [
+     "^decisions/brief-{k}$",
+     [
+      "kind",
+      "policyKey",
+      "projectKey",
+      "group",
+      "question",
+      "options",
+      "select",
+      "recommend",
+      "preview",
+      "plain",
+      "target",
+      "sources",
+      "raised",
+      "unblocks",
+      "updatedAt",
+      "recommended"
+     ]
+    ]
+   ]
+  },
+  "design": {
+   "skill": "episode-design",
+   "timeout": 1800,
+   "tools": "Read Write Edit Glob Grep Bash",
+   "allow": [
+    "Bash(node:*)",
+    "Bash(ffprobe:*)",
+    "Bash(ffmpeg:*)"
+   ],
+   "writes": [
+    [
+     "^projects/{k}/stages/(design|script|storyboard)$",
+     "*"
+    ],
+    [
+     "^projects/{k}/media/frames$",
+     [
+      "files",
+      "updatedAt"
+     ]
+    ],
+    [
+     "^projects/{k}/deliverables/(animatic|script|storyboard|d\\d+|l\\d\\d)(/versions/[^/]+)?$",
+     "*"
+    ],
+    [
+     "^decisions/(approve-{k}-curriculum|approve-{k}-animatic|pick-{k}-cold-open)$",
+     [
+      "kind",
+      "policyKey",
+      "projectKey",
+      "group",
+      "question",
+      "options",
+      "select",
+      "recommend",
+      "preview",
+      "plain",
+      "target",
+      "sources",
+      "raised",
+      "unblocks",
+      "why",
+      "updatedAt",
+      "version",
+      "recommended"
+     ]
+    ]
+   ]
+  },
+  "package": {
+   "skill": "episode-package",
+   "timeout": 1800,
+   "tools": "Read Write Edit Glob Grep Bash",
+   "allow": [
+    "Bash(node:*)",
+    "Bash(ffprobe:*)",
+    "Bash(ffmpeg:*)"
+   ],
+   "writes": [
+    [
+     "^projects/{k}/stages/package$",
+     "*"
+    ],
+    [
+     "^projects/{k}/deliverables/(package|s\\d\\d)(/versions/[^/]+)?$",
+     "*"
+    ],
+    [
+     "^decisions/pick-{k}-package$",
+     [
+      "kind",
+      "policyKey",
+      "projectKey",
+      "group",
+      "question",
+      "options",
+      "select",
+      "recommend",
+      "preview",
+      "plain",
+      "target",
+      "sources",
+      "raised",
+      "unblocks",
+      "why",
+      "updatedAt",
+      "version",
+      "recommended"
+     ]
+    ]
+   ]
+  },
+  "capture": {
+   "skill": "demo-capture",
+   "timeout": 1800,
+   "tools": "Read Write Edit Glob Grep Bash",
+   "allow": [
+    "Bash(node:*)",
+    "Bash(ffprobe:*)",
+    "Bash(ffmpeg:*)"
+   ],
+   "writes": [
+    [
+     "^projects/{k}/stages/capture$",
+     "*"
+    ],
+    [
+     "^projects/{k}/deliverables/d\\d+(/versions/[^/]+)?$",
+     "*"
+    ]
+   ]
+  },
+  "edit": {
+   "skill": "video-edit",
+   "timeout": 2400,
+   "tools": "Read Write Edit Glob Grep Bash",
+   "allow": [
+    "Bash(node:*)",
+    "Bash(ffprobe:*)",
+    "Bash(ffmpeg:*)"
+   ],
+   "writes": [
+    [
+     "^projects/{k}/stages/edit$",
+     "*"
+    ],
+    [
+     "^projects/{k}/deliverables/(long|s\\d\\d)(/versions/[^/]+)?$",
+     "*"
+    ]
+   ]
+  },
+  "qa": {
+   "skill": "content-qa",
+   "timeout": 900,
+   "tools": "Read Write Edit Glob Grep Bash",
+   "allow": [],
+   "writes": [
+    [
+     "^projects/{k}/qa/[^/]+$",
+     "*",
+     {
+      "create": true
+     }
+    ],
+    [
+     "^escapes/[^/]+$",
+     "*",
+     {
+      "create": true
+     }
+    ],
+    [
+     "^studio/qaAudit$",
+     "*"
+    ]
+   ]
+  },
+  "rules": {
+   "skill": "content-postmortem",
+   "timeout": 600,
+   "tools": "Read Write Edit Glob Grep Bash",
+   "allow": [],
+   "writes": [
+    [
+     "^projects/{k}/results/[^/]+$",
+     "*"
+    ],
+    [
+     "^projects/{k}/stages/measure$",
+     "*"
+    ],
+    [
+     "^rules/[^/]+$",
+     "*"
+    ],
+    [
+     "^decisions/rule-[^/]+$",
+     [
+      "kind",
+      "policyKey",
+      "projectKey",
+      "group",
+      "question",
+      "options",
+      "select",
+      "recommend",
+      "preview",
+      "plain",
+      "target",
+      "sources",
+      "raised",
+      "unblocks",
+      "updatedAt",
+      "recommended"
+     ]
+    ]
+   ]
+  },
+  "message": {
+   "skill": "content-pipeline",
+   "timeout": 600,
+   "tools": "Read Glob Grep WebSearch WebFetch Bash",
+   "allow": [],
+   "writes": []
+  },
+  "publish": {
+   "skill": "content-publish",
+   "timeout": 900,
+   "tools": "Read Write Edit Glob Grep Bash",
+   "allow": [
+    "Bash(curl -s:*)",
+    "Bash(curl -sL:*)"
+   ],
+   "writes": [
+    [
+     "^posts/[^/]+$",
+     [
+      "prep",
+      "files",
+      "captions",
+      "issues",
+      "checkedAt",
+      "time",
+      "schedulerPostId",
+      "scheduler",
+      "urls",
+      "status",
+      "postedAt",
+      "preparedAt",
+      "syncedAt",
+      "updatedAt",
+      "publish"
+     ]
+    ],
+    [
+     "^studio/metrics$",
+     "*"
+    ],
+    [
+     "^projects/{k}/results/[^/]+$",
+     [
+      "shorts",
+      "social"
+     ]
+    ]
+   ],
+   "gate": "approve.schedule: dispatch.py refuses a publish/schedule run without an answered decisions/schedule-{k} (a yes, under consent.maxAgeH old, for the same batch hash); with consent.live false every such run stays with the owner"
+  }
+ },
+ "route": {
+  "_doc": "request context -> profile. action first, then stage, then kind. Anything in never is not agent work and is not started.",
+  "stage": {
+   "research": "research",
+   "plan": "plan",
+   "script": "design",
+   "design": "design",
+   "storyboard": "design",
+   "package": "package",
+   "capture": "capture",
+   "edit": "edit",
+   "qa": "qa",
+   "QA": "qa",
+   "measure": "rules",
+   "rules": "rules",
+   "publish": "publish"
+  },
+  "kind": {
+   "cut": "edit",
+   "episode": "message",
+   "piece": "message",
+   "general": "message"
+  },
+  "never": [
+   "q",
+   "bridge",
+   "ask",
+   "decide"
+  ],
+  "action": {
+   "_doc": "checked before stage: demo tickets belong to the capture lane whatever stage raised them",
+   "demo-test": "capture",
+   "demo-notes": "capture",
+   "demo": "capture",
+   "waive": "qa"
+  }
+ },
+ "pageOwned": {
+  "^projects/{k}/stages/script$": [
+   "frozen"
+  ],
+  "^projects/{k}/stages/plan$": [
+   "pitchId",
+   "greenlit",
+   "evidence",
+   "warnings",
+   "slate",
+   "brief"
+  ],
+  "^projects/{k}/deliverables/l\\d\\d$": [
+   "title",
+   "order",
+   "retired",
+   "notNeeded"
+  ],
+  "^posts/[^/]+$": [
+   "plan",
+   "projectKey",
+   "deliverableId",
+   "channel",
+   "variant"
+  ],
+  "^decisions/[^/]+$": [
+   "answer",
+   "hold",
+   "note",
+   "undone",
+   "legacyRequestId"
+  ],
+  "^topics/[^/]+$": [
+   "suggestion",
+   "rejected"
+  ],
+  "^projects/{k}/qa/[^/]+$": [
+   "waived"
+  ]
+ },
+ "followups": {
+  "_doc": "every followup an agent lists must carry context.projectKey (collect fills it from the bundle's projectKey; a followup with none is dropped)"
+ },
+ "consent": {
+  "_doc": "Scheduling posts is the one agent action that needs the owner's recorded yes first: decisions/schedule-{k}, answered yes within maxAgeH for the same batch hash. live=false: the guard refuses every publish/schedule run (the default here; the owner flips it).",
+  "live": false,
+  "maxAgeH": 24
+ }
+}
